@@ -21,7 +21,6 @@ This project is a robotic arm designed to simulate movements using Gazebo and RV
 1. **Clone the repository:**
     ```bash
     git clone https://github.com/kemoa687/Robotic-arm.git
-    cd robotic-arm-project
     ```
 
 2. **Install dependencies:**
