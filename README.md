@@ -20,7 +20,7 @@ This project is a robotic arm designed to simulate movements using Gazebo and RV
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/robotic-arm-project.git
+    git clone https://github.com/kemoa687/Robotic-arm.git
     cd robotic-arm-project
     ```
 
@@ -37,17 +37,19 @@ This project is a robotic arm designed to simulate movements using Gazebo and RV
 
 1. **Launch the Gazebo simulation:**
     ```bash
-    roslaunch robotic_arm_project gazebo_simulation.launch
+    roslaunch my_arm gazebo.launch
     ```
+    ![Screenshot from 2024-06-10 11-00-24](https://github.com/kemoa687/Robotic-arm/assets/96356490/7112706d-7eb6-4195-8662-b52053f54a66)
 
 2. **Visualize in RViz:**
     ```bash
-    roslaunch robotic_arm_project rviz_visualization.launch
+    roslaunch my_arm rviz.launch
     ```
+![Screenshot from 2024-06-10 10-59-34](https://github.com/kemoa687/Robotic-arm/assets/96356490/800a0d7b-e906-4f2c-a31c-319e8d6af581)
 
 3. **Control the robotic arm using the Python script:**
     ```bash
-    rosrun robotic_arm_project move_arm.py
+    rosrun my_arm move_arm.py
     ```
 
 ## Inverse Kinematics
@@ -60,7 +62,6 @@ The `move_arm.py` script is responsible for moving the robotic arm to a specific
 # Example target coordinates
 target_x = 0.5
 target_y = 0.2
-target_z = 0.3
 
 # Call the function to move the arm
-move_to_point(target_x, target_y, target_z)
+goto(theta = 0 , x = target_x , y = target_y , theta_out = 90 , steps=50, t_step=100)
